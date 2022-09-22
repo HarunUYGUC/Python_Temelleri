@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ritwickdey.liveserver",
+        "esbenp.prettier-vscode",
+        "pkief.material-icon-theme",
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "zhuangtongfa.Material-theme"
+    ]
+}
