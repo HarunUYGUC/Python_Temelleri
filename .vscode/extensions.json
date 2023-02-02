@@ -5,6 +5,9 @@
         "pkief.material-icon-theme",
         "eamodio.gitlens",
         "donjayamanne.githistory",
-        "zhuangtongfa.Material-theme"
+        "zhuangtongfa.material-theme",
+        "enkia.tokyo-night",
+        "sdras.night-owl",
+        "github.github-vscode-theme"
     ]
 }
