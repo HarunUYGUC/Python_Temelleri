@@ -1,10 +1,14 @@
 class Person:
+
     # Yapıcı Metotlar (Constructor)
-    def __init__(self, name, surname, year):
+    def __init__(self, _name, _surname, _year):
+        """Nesneleri oluştururken name yazdıysak değişkeni _name şeklinde yazmak daha 
+        mantıklı olabilir."""
+        
         # Object Attributes veya Instance Attributes (Nesneye Özel Olan Özellikler)
-        self.name = name
-        self.surname = surname
-        self.year = year
+        self.name = _name
+        self.surname = _surname
+        self.year = _year
 
     # Instance Methods
     def intro(self):
