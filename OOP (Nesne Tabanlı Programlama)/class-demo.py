@@ -3,11 +3,11 @@
 # 5 adet farklı comment oluşturup döngü yardımıyla yorumları ekrana yazdırınız.
 
 class Comment:
-    def __init__(self, username, text, likes=0, dislikes=0):
-        self.username = username
-        self.text = text
-        self.likes = likes
-        self.dislikes = dislikes
+    def __init__(self, _username, _text, _likes=0, _dislikes=0):
+        self.username = _username
+        self.text = _text
+        self.likes = _likes
+        self.dislikes = _dislikes
 
 c1 = Comment("sadikturan", "güzel kurs")
 c2 = Comment("ahmetyilmaz", "çok güzel bir kurs")
