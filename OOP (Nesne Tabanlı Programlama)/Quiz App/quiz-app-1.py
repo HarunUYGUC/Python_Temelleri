@@ -31,17 +31,17 @@ class Question:
 question1 = Question("1) En iyi programlama dili hangisidir?: ", ["Python", "C#", "Java", "Dart"], "Python")
 # userAnswer = input("Cevabınızı giriniz: ")
 # print(question1.check_answer())
-# time.sleep(1.8)
+# time.sleep(1.7)
 
 question2 = Question("2) En popüler programlama dili hangisidir?: ", ["Python", "Java", "C#", "Dart"], "Python")
 # userAnswer = input("Cevabınızı giriniz: ")
 # print(question2.check_answer())
-# time.sleep(1.8)
+# time.sleep(1.7)
 
 question3 = Question("3) En çok kazandıran programlama dili hangisidir?: ", ["Python", "Java", "Dart", "C#"], "Python")
 # userAnswer = input("Cevabınızı giriniz: ")
 # print(question3.check_answer())
-# time.sleep(1.8)
+# time.sleep(1.7)
 
 questions = [question1, question2, question3]
 
@@ -49,4 +49,4 @@ for q in questions:
     print(q.text, q.choices)
     userAnswer = input("Cevabınızı giriniz: ")
     print(q.check_answer())
-    time.sleep(1.8)
+    time.sleep(1.7)
