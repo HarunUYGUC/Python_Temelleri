@@ -17,8 +17,7 @@ class Question:
     def check_answer(self):
         if (userAnswer not in self.choices):
             return f"{userAnswer} böyle bir cevap {self.choices} şıkları içerisinde yok!"
-
-        if (userAnswer == self.answer):
+        elif (userAnswer == self.answer):
             return f"Tebrikler cevabınız doğru, cevap {self.answer}'idi."
         else:
             return f"Üzgünüz cevabınız doğru değil, cevap {self.answer}'idi."
