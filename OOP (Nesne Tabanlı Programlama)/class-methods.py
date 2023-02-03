@@ -20,8 +20,12 @@ class User:
         self.age = _age
         User.active_users += 1 
 
+print(User.display_active_users())
+
 user = User("Harun", "Uyguç", 19)
 print(user.firstName)
 
 user = User.from_string("Harun, Uyguç, 19")
 print(user.firstName)
+
+print(User.display_active_users())
