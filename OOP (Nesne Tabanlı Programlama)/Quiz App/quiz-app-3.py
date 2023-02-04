@@ -36,5 +36,5 @@ for q in questions:
 
     userAnswer = input("Cevabınızı giriniz: ")
     print(q.check_answer())
-    print(Question.display_total_score())
+    print(Question.display_score())
     time.sleep(1.7)
