@@ -31,7 +31,7 @@ questions = [question1, question2, question3]
 for q in questions:
     print(q.text)
 
-    for i in range(0, len(questions) + 1):
+    for i in range(0, len(q.choices)):
         print(f"- {q.choices[i]}")
 
     userAnswer = input("Cevabınızı giriniz: ")
