@@ -25,13 +25,32 @@ isim = "Harun"
 for i in isim:
     print(i)
 
-# print("*********")
+print("**********")
+
+"""
+for döngüsü __iter__ metotu sayesinde iterable nesneleri iterator nesnesine
+dönüştürür. __next__ metotu sayesinde de iterator nesnesine dönüşen iterable 
+nesnesindeki elemanları teker teker yazdırır. for döngüsü bunları otomatik olarak
+yapar fakat bizim de kendi oluşturduğumuz veri tipleri için böyle bir şey yapmak 
+istediğimiz zaman bu tarz kullanım yapmamız gerekmektedir. iterators-demo.py 
+dosyasındaki gibi. Çünkü kendi oluşturduğumuz veri tipinin böyle bir kullanıma sahip
+olması için mantıken bizim de bu oto kullanımı kendimiz oluşturmamız gerekiyor.
+"""
+
+# print("----------")
 # sayi = 10
 
 # for i in sayi:
 #     print(i)  # TypeError: 'int' object is not iterable
 
-print("-----------")
+# sayilar = [1, 2, 3, 4, 5]
+
+# print(next(sayilar)) # TypeError: 'list' object is not an iterator
+
+# print("-----------")
+
+
+print("**********")
 
 sayilar = [1, 2, 3, 4, 5]
 
