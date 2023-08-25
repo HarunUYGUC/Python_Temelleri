@@ -1,0 +1,5 @@
+birinci satir.
+ikinci satir.
+ucuncu satir.
+dorduncu satir.
+besinci satir.
