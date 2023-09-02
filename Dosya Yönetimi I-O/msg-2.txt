@@ -1,5 +1,11 @@
-birinci satir.
-ikinci satir.
-ucuncu satir.
+yeni satıüzerine eklenecek satır 
+satir.
 dorduncu satir.
 besinci satir.
+alt�nc� sat�r 
+yedinci sat�r 
+Yukar�daki alt� ve yedide encoding belirtmedim 
+altıncı satır 
+yedinci satır 
+encoding='UTF-8' olarak belirttim 
+sonuna kadar okunacak, daha sonra bu sat�r eklenecek 
