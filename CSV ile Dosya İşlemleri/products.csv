@@ -1,8 +1,9 @@
-ProductName,Price,IsPublished,Category,Reviews
-Iphone 6,3600.0,3000,Telefon,4.6
-Iphone 8,4800.0,4000,Telefon,4.6
-Iphone 8 Plus,6000.0,5000,Telefon,4.5
-Iphone XR,7200.0,6000,Telefon,4.7
-Iphone 11,8400.0,7000,Telefon,4.8
-Macbook Pro,10800.0,9000,Bilgisayar,4.7
-Macbook Air,8400.0,7000,Bilgisayar,4.6
+ProductName,Price,IsPublished,Category,Reviews
+
+Iphone 7,3000,True,Telefon,4.7
+
+Iphone 8,4000,True,Telefon,4.8
+
+Iphone X,5000,True,Telefon,4.9
+
+Iphone 12,8000,True,Telefon,4.93
