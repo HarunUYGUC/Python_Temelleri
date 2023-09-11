@@ -8,6 +8,14 @@
         "zhuangtongfa.material-theme",
         "enkia.tokyo-night",
         "sdras.night-owl",
-        "github.github-vscode-theme"
+        "github.github-vscode-theme",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "mechatroner.rainbow-csv",
+        "donjayamanne.git-extension-pack",
+        "codezombiech.gitignore",
+        "ziyasal.vscode-open-in-github",
+        "alefragnani.project-manager"
     ]
 }
