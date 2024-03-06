@@ -11,13 +11,16 @@
 #   h- Kız öğrencileri harf sırasına göre getiriniz.
 
 import mysql.connector
-from datetime import datetime
-from connection import connection 
-# connection.py dosyasından connection değişkenini import ettik.
 
 class Student:
     
-    connection = connection
+    connection = mysql.connector.connect(
+        host = "localhost",
+        user = "root",
+        password = "1234",
+        database = "schooldb"
+    )
+
     mycursor = connection.cursor()
 
     def __init__(self, studentNumber, name, surname, birthdate, gender):
