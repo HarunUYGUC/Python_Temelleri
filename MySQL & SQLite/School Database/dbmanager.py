@@ -3,6 +3,7 @@ from datetime import datetime
 from connection import connection 
 from student import Student
 from teacher import Teacher
+from Class import Class
 
 class DbManager:
 
@@ -26,6 +27,16 @@ class DbManager:
             return Student.createStudent(obj)
         except mysql.connector.Error as err:
             print("Error: ", err)
+
+    def getClasses(self):
+        sql = "SELECT * FROM class"
+        self.cursor.execute(sql)
+
+        try:
+            obj = self.cursor.fetchall()
+            return Class.createClass(obj)
+        except mysql.connector.Error as err:
+            print("Error: ", err) 
 
     def getStudentsByClassId(self, classid):
         sql = "SELECT * FROM student WHERE classid = %s"
@@ -61,6 +72,17 @@ class DbManager:
         except mysql.connector.Error as err:
             print("Hata:", err)    
 
+    def deleteStudent(self, studentid):
+        sql = "DELETE FROM student WHERE id = %s"
+        value = (studentid,)
+        self.cursor.execute(sql, value)
+
+        try:
+            self.connection.commit()
+            print(f"{self.cursor.rowcount} tane kayıt eklendi.")
+        except mysql.connector.Error as err:
+            print("Hata:", err)
+
     def addTeacher(self, teacher: Teacher):
         pass
 
@@ -71,7 +93,7 @@ class DbManager:
     # __del__() metodu da otomatik olarak sonda kullanılır.
     def __del__(self):
         self.connection.close()
-        print("Database silindi.")
+        print("Database'den Çıkış Yapıldı.")
 
 
 db = DbManager()
