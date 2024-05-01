@@ -1,0 +1,21 @@
+{
+  "firstName": "Harun",
+  "lastName": "Uyguç",
+  "hobbies": [
+    "bilgisayar oyunlarý",
+    "spor"
+  ],
+  "age": 21,
+  "gameCharacters": [
+    {
+      "firstName": "Kyle",
+      "lastName": "Crane",
+      "age": 24
+    },
+    {
+      "firstName": "Leon",
+      "lastName": "S. Kennedy",
+      "age": 22
+    }
+  ]
+}
