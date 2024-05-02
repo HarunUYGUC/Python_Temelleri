@@ -1,0 +1,26 @@
+{
+  "users": {
+    "harunuyguc": {
+      "firstName": "Harun",
+      "lastName": "Uyguç"
+    },
+    "kylecrane": {
+      "firstName": "Kyle",
+      "lastName": "Crane"
+    }
+  },
+  "products": {
+    "1": {
+      "productName": "Iphone 8",
+      "price": 5000
+    },
+    "2": {
+      "productName": "Iphone 12",
+      "price": 8000
+    },
+    "3": {
+      "productName": "Iphone 11",
+      "price": 7600
+    }
+  }
+}
