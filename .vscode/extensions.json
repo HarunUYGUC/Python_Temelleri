@@ -15,6 +15,7 @@
         "alefragnani.project-manager",
         "mongodb.mongodb-vscode",
         "ms-python.python",
-        "ms-toolsai.jupyter"
+        "ms-toolsai.jupyter",
+        "grapecity.gc-excelviewer"
     ]
 }
