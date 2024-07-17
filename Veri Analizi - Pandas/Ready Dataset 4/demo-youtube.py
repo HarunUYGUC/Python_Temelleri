@@ -38,6 +38,52 @@ result = df[df["views"].min() == df["views"]]["channel"].iloc[0]
 result = df.sort_values("views", ascending=False).head(10)[["channel", "views"]]
 
 # 10- Kategoriye göre likes ortalamalarını sıralı şekilde getiriniz.
+result = df.groupby("category").mean("likes").sort_values("likes")["likes"]
+
+# 11- Kategoriye göre görüntülenme sayılarını yukarıdan aşağıya sıralayınız.
+result = df.groupby("category").sum().sort_values("views", ascending=False)["views"]
+
+# 12- Her kategoride kaç video vardır?
+result = df["category"].value_counts()
+
+# 13- Her videonun title uzunluğu bilgisini yeni bir kolonda gösteriniz.
+df["title_len"] = df["name"].apply(len)
+result = df
+
+# 14- Her video için name'deki kelime sayısını yeni kolonda gösteriniz.
+df["word_count"] = df["name"].apply(lambda x: len(x.split(" ")))
+result = df
+
+def wordCount(name):
+    return len(name.split(" "))
+
+df["word_count"] = df["name"].apply(wordCount)
+result = df
 
 
 print(result)
+
+# 15- En popüler videoları listeleyiniz. (likes/views oranına göre.)
+
+def likeDislikeOranınıHesapla(dataset):
+    likesList = list(dataset["likes"])
+    viewsList = list(dataset["views"])
+
+    liste = list(zip(likesList, viewsList)) # zip ile tuple'a çevirdik.
+
+    oranListesi = []
+
+    for like, view in liste:
+        if ((like + view) == 0):
+            oranListesi.append(0)
+        else:
+            oranListesi.append(like / (like + view))
+
+    # print(liste)
+    # print(likesList, viewsList)
+    return oranListesi
+
+# likeDislikeOranınıHesapla(df)
+# print(likeDislikeOranınıHesapla(df))
+df["beğeni_oranı"] = likeDislikeOranınıHesapla(df)
+print(df.sort_values("beğeni_oranı", ascending=False)[["channel", "likes", "views", "beğeni_oranı"]])
