@@ -67,4 +67,4 @@ Bunun için blogapp projesi içerisindeki blogapp proje klasörüne gidip settin
 blog uygulamamızı eklemeliyiz.
 'blog', şeklinde uygulamamızın ismini yazarak eklemeliyiz.
 
-
+! yaptıktan sonra Enter'a basarak html dosyası içerisinde hazır bir html iskeleti oluşturmuş oluruz.

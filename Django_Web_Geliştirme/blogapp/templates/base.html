@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title demek Chrome'da üst kısımda gözüken başlık kısmıdır. -->
+    <title>
+        {% block title %} {% endblock %} | Blogapp
+    </title>
+</head>
+<body>
+    <ul>
+        <li><a href="">Homepage</a></li>
+        <li><a href="">Blogs</a></li>
+    </ul>
+    {% block content %} <!-- content yerine içerik de yazabiliriz yani bu aslında bir değişken ismidir. -->
+    {% endblock %}
+</body>
+</html>
