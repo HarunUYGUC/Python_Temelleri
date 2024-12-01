@@ -1,0 +1,70 @@
+Terminale sırasıyla bu komutlar yazılır.
+
+django-admin => Kullanabileceğimiz komutları gösterir.
+
+django-admin startproject blogapp => Hazır kalıplar ile proje oluşturur.
+
+python manage.py runserver => Projeyi çalıştırır fakat blogapp klasörünün dizininde olmamız gerekmektedir.
+Yoksa hata verir.
+
+cd klasor_ismi => Dizin değiştirmek için kullanılır.
+ls => Son seçilen klasöre konumlanırız. 
+cd .. => Bir önceki dizine geçer.
+
+Bu klasör değiştirme işlemleri tek bir terminal için değişir. Yeni terminal açıldığında ayarlar eski haline 
+döner.
+
+Bu işlemlerden sonra projenin çalıştığı port adresini öğreniriz.
+Aşağıdaki şekilde bir çıktı gelir.
+
+December 01, 2024 - 13:33:29
+Django version 3.2.9, using settings 'blogapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+127.0.0.1:8000 projemizin çalıştığı port adresidir. İnternete bu port adresini girip projemizin çalışan 
+haline ulaşabiliriz.
+
+Projeyi çalıştırdığımızda blogapp klasörü içerisinde olmayan bir db.sqlite3 database dosyası oluşur.
+Yani bu dosyada bir değişiklik yapıldığı için (yoktan var olmuş olsa bile)
+"You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): 
+admin, auth, contenttypes, sessions.      
+Run 'python manage.py migrate' to apply them."
+şeklinde bir uyarı alırız.
+
+CTRL + C ile çalışan projeyi durdurabiliriz.
+
+cls ile terminal ekranını temizleyebiliriz.
+
+python -m venv my-env => Komutu ile sanal ortam oluştururuz. my-env oluşturacağımız sanal dizinin ismidir.
+Çıkan uyarıya da Yes demeliyiz.
+
+Bu ayarı yapınca artık Global paketlere ulaşamıyoruz. Artık ne yaparsak oluşturduğumuz my-env çalışma alanında
+yapmış oluyoruz.
+
+CTRL + SHIFT + " ile yeni terminal açarız.
+
+pip freeze => Terminale yazarak global olarak kurulu Django, Seaborn gibi paketlere ve versiyonlarına 
+Django==3.2.9 şeklinde ulaşırız.
+
+pip install Django==5.1.3 ile Django bilgisayara kurulur.
+
+deactivate => Terminale yazarak sanal ortamdan çıkarız.
+
+my-env\Scripts\activate.bat => İle sanal ortama geçiş sağlanır.
+
+Sanal ortam bende karıştı. Çünkü Conda kuruluydu bende o yüzden Venv kurmuyor Conda'yı seçiyor.
+Zaten sanal ortam kullanmamıza gerek yok, sorun değil.
+
+1 proje oluşturduktan sonra içerisinde en az 1 tane uygulama olmak zorundadır.
+İstersek birden fazla uygulama oluşturabiliriz. Örneğin: Admin, Account, Blog şeklinde.
+Bu sayede herbiri ayrı ama birbiriyle mantıksal olarak bağlı uygulamaları daha düzenli bir şekilde saklamış oluruz.
+
+python manage.py startapp blog => Blog isminde yeni bir uygulama oluşturur.
+
+Uygulamayı oluşturduk oluşturmasına fakat blogapp projesine bu uygulamayı tanıtmamız gerekiyor.
+Bunun için blogapp projesi içerisindeki blogapp proje klasörüne gidip settings.py dosyasındaki INSTALLED_APPS'e
+blog uygulamamızı eklemeliyiz.
+'blog', şeklinde uygulamamızın ismini yazarak eklemeliyiz.
+
+
