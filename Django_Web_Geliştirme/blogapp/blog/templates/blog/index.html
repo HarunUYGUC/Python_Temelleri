@@ -25,6 +25,7 @@ html iskeleti oluşturmuş oluruz. -->
  aşağıdaki gibi kod yazabiliriz.  -->
 
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Homepage
@@ -33,5 +34,14 @@ Homepage
 {% block content %}
 
 <h1>Homepage</h1>
+
+<!--  
+Uygulama seviyesindeki statik klasörleri için.
+<img src="{% static 'blog/img/django.png' %}" alt="" width="100">
+
+Alttaki ise proje seviyesindeki statik klasörleri için.
+-->
+
+<img src="{% static 'img/django.png' %}" alt="" width="100">
 
 {% endblock %}

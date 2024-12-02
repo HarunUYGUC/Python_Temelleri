@@ -68,3 +68,28 @@ blog uygulamamızı eklemeliyiz.
 'blog', şeklinde uygulamamızın ismini yazarak eklemeliyiz.
 
 ! yaptıktan sonra Enter'a basarak html dosyası içerisinde hazır bir html iskeleti oluşturmuş oluruz.
+
+Resim vb. statik dosyaları web sitesinde göstermek için uygulamamızın klasörüne static adında bir klasör 
+onun altında blog ve onun da altında css adında klasör oluşturmalıyız.
+Daha sonra style.css dosyasını eklemeliyiz.
+base.html dosyasına da <head> kısmına <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> satırını ekleriz.
+Tüm bunlardan önce base.html dosyasının en başına {% load static %} satırını eklemeliyiz.
+Proje çalışır haldeyken sayfayı yenileyince değişiklik gözükmeyebilir.
+Değişikliğin gözükmesi için projeyi durdurup tekrardan çalıştırmamız gerekiyor.
+
+Projeye eklediğimiz resmi projenin ana sayfasında göstermek için index.html dosyasına 
+<img src="{% static 'blog/img/django.png' %}" alt="" width="100"> satırını eklemeliyiz.
+En üste {% load static %} satırını da eklemek gerekiyor.
+
+width="100" ile resmin boyutunu ayarlıyoruz.
+
+Uygulama klasörü içerisinde statik klasörü oluşturmak yerine proje klasörü içerisinde de oluşturabiliriz.
+Daha sonra settings.py dosyasındaki 
+STATIC_URL = '/static/' satırının altına 
+STATCFILES_DIRS = [
+    BASE_DIR / "static"
+]
+satırını eklememiz gerekiyor.
+
+İlk satır uygulama seviyesindeki static klasörlerini görmemizi sağlarken
+ikinci satır proje seviyesi için aynı işe yarar.
