@@ -4,14 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--  
-    Uygulama seviyesindeki statik klasörleri için.
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-
-    Alttaki ise proje seviyesindeki statik klasörleri için.
-    -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Title demek Chrome'da üst kısımda gözüken başlık kısmıdır. -->
+    {% block css_files %} {% endblock %}
     <title>
         {% block title %} {% endblock %} | Blogapp
     </title>
@@ -21,8 +15,15 @@
         <li><a href="">Homepage</a></li>
         <li><a href="">Blogs</a></li>
     </ul>
-    <!-- content yerine içerik de yazabiliriz yani bu aslında bir değişken ismidir. -->
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
 </body>
 </html>
+
+    <!--  
+    Uygulama seviyesindeki statik klasörleri için.
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+    Alttaki ise proje seviyesindeki statik klasörleri için.
+    -->
+    <!-- Title demek Chrome'da üst kısımda gözüken başlık kısmıdır. -->
+    <!-- content yerine içerik de yazabiliriz yani bu aslında bir değişken ismidir. -->
