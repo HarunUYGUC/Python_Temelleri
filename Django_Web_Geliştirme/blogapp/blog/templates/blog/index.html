@@ -9,7 +9,81 @@
 
 {% block content %}
 
-<h1>Homepage</h1>
+<!-- <h1>Homepage</h1> -->
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+            <!-- <div class="list-group">
+                <a class="list-group-item list-group-action" href="">Programlama</a>
+                <a class="list-group-item list-group-action" href="">Web Programlama</a>
+                <a class="list-group-item list-group-action" href="">Mobil Uygulamalar</a>
+            </div> -->
+            
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-9">
+            <!-- <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{% static 'img/1.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Komple Web Geliştirme Kursu</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{% static 'img/2.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Komple Web Geliştirme Kursu</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{% static 'img/3.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Komple Web Geliştirme Kursu</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{% static 'img/4.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Komple Web Geliştirme Kursu</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet!</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <h1>Homepage</h1>
+            <hr>
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+            {% include 'blog/partials/_blog.html' %}
+        </div>
+    </div>
+</div>
 
 <!-- <img src="{% static 'blog/img/django.png' %}" alt="" width="100"> -->
 
